@@ -1,6 +1,6 @@
 <div class="container">
   <% flash.each do |name, msg| %>
-    <div class="alert_cross_div alert alert-success" role="alert">
+    <div class="alert alert-<%= name == "notice" ? "success" : "danger" %> alert-dismissible fade show" role="alert">
       <%= msg %>
       <a href="#" class="close" data-dismiss="alert">
         <span class="alert_cross">&times;</span>
